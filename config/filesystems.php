@@ -57,10 +57,19 @@ return [
             'throw' => false,
         ],
 
+        // 'gcp' => [
+        //     'driver' => 'gcs',
+        //     'project_id' => env('GOOGLE_CLOUD_PROJECT_ID'),
+        //     'key_file' => storage_path('app/google-cloud-key.json'), // Path to your service account key
+        //     'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET'),
+        //     'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', null),
+        //     'visibility' => 'public',
+        // ],
+
         'gcs' => [
             'driver' => 'gcs',
-            'project_id' => env('GCP_PROJECT_ID'),
-            'bucket' => env('GCP_BUCKET'),
+            'project_id' => env('GOOGLE_CLOUD_PROJECT_ID'),
+            'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET'),
             'key_file' => env('GCP_KEY_FILE'), // Path to your JSON key file
             'path_prefix' => null, // Optional: Specify a directory within the bucket
             'storage_api_uri' => null, // Optional: Specify the storage API URI
